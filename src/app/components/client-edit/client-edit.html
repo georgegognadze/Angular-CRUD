@@ -1,0 +1,167 @@
+<div class="client-edit" *ngIf="client">
+    <h2>კლიენტის რედაქტირება</h2>
+
+    <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="firstName">სახელი:</label>
+            <input id="firstName" formControlName="firstName" type="text" class="form-control">
+            <div *ngIf="clientForm.get('firstName')?.invalid && clientForm.get('firstName')?.touched"
+                class="error-messages">
+                <small *ngIf="clientForm.get('firstName')?.errors?.['required']">სახელი აუცილებელია.</small>
+                <small *ngIf="clientForm.get('firstName')?.errors?.['minlength']">სახელი უნდა იყოს მინიმუმ 2
+                    სიმბოლო.</small>
+                <small *ngIf="clientForm.get('firstName')?.errors?.['maxlength']">სახელი უნდა იყოს მაქსიმუმ 50
+                    სიმბოლო.</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">გვარი:</label>
+            <input id="lastName" formControlName="lastName" type="text" class="form-control">
+            <div *ngIf="clientForm.get('lastName')?.invalid && clientForm.get('lastName')?.touched"
+                class="error-messages">
+                <small *ngIf="clientForm.get('lastName')?.errors?.['required']">გვარი აუცილებელია.</small>
+                <small *ngIf="clientForm.get('lastName')?.errors?.['minlength']">გვარი უნდა იყოს მინიმუმ 2
+                    სიმბოლო.</small>
+                <small *ngIf="clientForm.get('lastName')?.errors?.['maxlength']">გვარი უნდა იყოს მაქსიმუმ 50
+                    სიმბოლო.</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">სქესი:</label>
+            <select id="gender" formControlName="gender" class="form-control">
+                <option value="">აირჩიეთ სქესი</option>
+                <option value="კაცი">კაცი</option>
+                <option value="ქალი">ქალი</option>
+            </select>
+            <div *ngIf="clientForm.get('gender')?.invalid && clientForm.get('gender')?.touched" class="error-messages">
+                <small *ngIf="clientForm.get('gender')?.errors?.['required']">სქესი აუცილებელია.</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="personalNumber">პირადი ნომერი:</label>
+            <input id="personalNumber" formControlName="personalNumber" type="text" class="form-control">
+            <div *ngIf="clientForm.get('personalNumber')?.invalid && clientForm.get('personalNumber')?.touched"
+                class="error-messages">
+                <small *ngIf="clientForm.get('personalNumber')?.errors?.['required']">პირადი ნომერი აუცილებელია.</small>
+                <small *ngIf="clientForm.get('personalNumber')?.errors?.['pattern']">პირადი ნომერი უნდა შეიცავდეს ზუსტად
+                    11 ციფრს.</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="mobile">მობილურის ნომერი:</label>
+            <input id="mobile" formControlName="mobile" type="text" class="form-control">
+            <div *ngIf="clientForm.get('mobile')?.invalid && clientForm.get('mobile')?.touched" class="error-messages">
+                <small *ngIf="clientForm.get('mobile')?.errors?.['required']">მობილურის ნომერი აუცილებელია.</small>
+                <small *ngIf="clientForm.get('mobile')?.errors?.['startsWithFive']">მობილურის ნომერი უნდა დაიწყოს
+                    5-იანით.</small>
+                <small *ngIf="clientForm.get('mobile')?.errors?.['length']">მობილურის ნომერი უნდა იყოს ზუსტად 9
+                    ციფრი.</small>
+            </div>
+        </div>
+
+        <div formGroupName="legalAddress">
+            <div class="form-group">
+                <label for="legalCountry">იურიდიული მისამართი (ქვეყანა):</label>
+                <input id="legalCountry" formControlName="country" type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="legalCity">იურიდიული მისამართი (ქალაქი):</label>
+                <input id="legalCity" formControlName="city" type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="legalAddressLine">იურიდიული მისამართი (მისამართი):</label>
+                <input id="legalAddressLine" formControlName="addressLine" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div formGroupName="actualAddress">
+            <div class="form-group">
+                <label for="actualCountry">ფაქტიური მისამართი (ქვეყანა):</label>
+                <input id="actualCountry" formControlName="country" type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="actualCity">ფაქტიური მისამართი (ქალაქი):</label>
+                <input id="actualCity" formControlName="city" type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="actualAddressLine">ფაქტიური მისამართი (მისამართი):</label>
+                <input id="actualAddressLine" formControlName="addressLine" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="photo">ფოტო URL:</label>
+            <input id="photo" formControlName="photo" type="text" class="form-control">
+        </div>
+
+        <div formArrayName="accounts">
+            <div *ngFor="let account of accountsFormArray.controls; let i = index" [formGroupName]="i">
+                <h3>ანგარიშის {{ i + 1 }}:</h3>
+                <div class="form-group">
+                    <label for="accountNumber-{{i}}">ანგარიშის ნომერი:</label>
+                    <input id="accountNumber-{{i}}" formControlName="accountNumber" type="number" class="form-control">
+                </div>
+        
+                <div class="form-group">
+                    <label for="clientNumber-{{i}}">კლიენტის ნომერი:</label>
+                    <input id="clientNumber-{{i}}" formControlName="clientNumber" type="number" class="form-control" [value]="client.personalNumber">
+                </div>
+
+                <div class="form-group">
+                    <label for="type-{{i}}">ანგარიშის ტიპი:</label>
+                    <select id="type-{{i}}" formControlName="type" class="form-control">
+                        <option value="">აირჩიეთ ანგარიშის ტიპი</option>
+                        <option value="მიმდინარე">მიმდინარე</option>
+                        <option value="შემნახველი">შემნახველი</option>
+                        <option value="დაგროვებითი">დაგროვებითი</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="currency-{{i}}">ანგარიშის ვალუტა:</label>
+                    <select id="currency-{{i}}" formControlName="currency" class="form-control">
+                        <option value="">აირჩიეთ ვალუტა</option>
+                        <option value="GEL">GEL</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="status-{{i}}">ანგარიშის სტატუსი:</label>
+                    <select id="status-{{i}}" formControlName="status" class="form-control">
+                        <option value="">აირჩიეთ სტატუსი</option>
+                        <option value="აქტიური">აქტიური</option>
+                        <option value="დახურული">დახურული</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" (click)="onDeleteAccount(i)" class="btn btn-danger">ანგარიშის წაშლა</button>
+                </div>
+                
+                <hr>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="button" (click)="onAddAccount()" class="btn btn-success">ანგარიშის დამატება</button>
+        </div>
+        <div class="form-actions">
+            <button type="button" (click)="onCloseAccount()" class="btn btn-danger">კლიენტის წაშლა</button>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">ცვლილებების შენახვა</button>
+        </div>
+        <div class="form-actions">
+            <a [routerLink]="['/clients']" class="btn btn-primary">უკან დაბრუნება</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,118 @@
+<form [formGroup]="clientForm" (ngSubmit)="onSubmit()" class="client-form">
+  <h2>კლიენტის დამატება</h2>
+  <div class="form-group">
+    <label for="firstName">სახელი:</label>
+    <input id="firstName" formControlName="firstName" type="text" class="form-control">
+    <div *ngIf="clientForm.get('firstName')?.invalid && clientForm.get('firstName')?.touched" class="error-messages">
+      <small *ngIf="clientForm.get('firstName')?.errors?.['required']">სახელი აუცილებელია.</small>
+      <small *ngIf="clientForm.get('firstName')?.errors?.['minlength']">სახელი უნდა იყოს სულ მცირე ორი ასოსგან შემდგარი.</small>
+      <small *ngIf="clientForm.get('firstName')?.errors?.['maxlength']">სახელი არ უნდა იყოს 50 ასოზე მეტი.</small>
+      <small *ngIf="clientForm.get('firstName')?.errors?.['pattern']">სახელი შეიძლება შეიცავდეს მხოლოდ ქართულ ან ლათინურ ასოებს.</small>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">გვარი:</label>
+    <input id="lastName" formControlName="lastName" type="text" class="form-control">
+    <div *ngIf="clientForm.get('lastName')?.invalid && clientForm.get('lastName')?.touched" class="error-messages">
+      <small *ngIf="clientForm.get('lastName')?.errors?.['required']">გვარი აუცილებელია.</small>
+      <small *ngIf="clientForm.get('lastName')?.errors?.['minlength']">გვარი უნდა იყოს სულ მცირე ორი ასოსგან შემდგარი.</small>
+      <small *ngIf="clientForm.get('lastName')?.errors?.['maxlength']">გვარი არ უნდა იყოს 50 ასოზე მეტი.</small>
+      <small *ngIf="clientForm.get('lastName')?.errors?.['pattern']">გვარი შეიძლება შეიცავდეს მხოლოდ ქართულ ან ლათინურ ასოებს..</small>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="gender">სქესი:</label>
+    <select id="gender" formControlName="gender" class="form-control">
+      <option value="" disabled>აირჩიეთ სქესი</option>
+      <option value="კაცი">კაცი</option>
+      <option value="ქალი">ქალი</option>
+    </select>
+    <div *ngIf="clientForm.get('gender')?.invalid && clientForm.get('gender')?.touched" class="error-messages">
+      <small *ngIf="clientForm.get('gender')?.errors?.['required']">სქესი აუცილებელია.</small>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="personalNumber">პირადი ნომერი:</label>
+    <input id="personalNumber" formControlName="personalNumber" type="text" class="form-control">
+    <div *ngIf="clientForm.get('personalNumber')?.invalid && clientForm.get('personalNumber')?.touched" class="error-messages">
+      <small *ngIf="clientForm.get('personalNumber')?.errors?.['required']">პირადი ნომერი აუცილებელია.</small>
+      <small *ngIf="clientForm.get('personalNumber')?.errors?.['pattern']">პირადი ნომერი უნდა იყოს ზუსტად 11 ციფრი.</small>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="mobile">მობილურის ნომერი:</label>
+    <input id="mobile" formControlName="mobile" type="text" class="form-control">
+    <div *ngIf="clientForm.get('mobile')?.invalid && clientForm.get('mobile')?.touched" class="error-messages">
+      <small *ngIf="clientForm.get('mobile')?.errors?.['required']">მობილურის ნომერი აუცილებელია.</small>
+      <small *ngIf="clientForm.get('mobile')?.errors?.['startsWithFive']">მობილურის ნომერი უნდა დაიწყოს 5-იანით.</small>
+      <small *ngIf="clientForm.get('mobile')?.errors?.['length']">მობილურის ნომერი უნდა იყოს ზუსტად 9 ციფრი.</small>
+    </div>
+  </div>
+
+  <fieldset formGroupName="legalAddress" class="address-group">
+    <legend>იურიდიული მისამართი</legend>
+    <div class="form-group">
+      <label for="legalCountry">ქვეყანა:</label>
+      <input id="legalCountry" formControlName="country" type="text" class="form-control">
+      <div *ngIf="clientForm.get('legalAddress.country')?.invalid && clientForm.get('legalAddress.country')?.touched" class="error-messages">
+        <small *ngIf="clientForm.get('legalAddress.country')?.errors?.['required']">ქვეყანა აუცილებელია.</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="legalCity">ქალაქი:</label>
+      <input id="legalCity" formControlName="city" type="text" class="form-control">
+      <div *ngIf="clientForm.get('legalAddress.city')?.invalid && clientForm.get('legalAddress.city')?.touched" class="error-messages">
+        <small *ngIf="clientForm.get('legalAddress.city')?.errors?.['required']">ქალაქი აუცილებელია.</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="legalAddressLine">მისამართი:</label>
+      <input id="legalAddressLine" formControlName="addressLine" type="text" class="form-control">
+      <div *ngIf="clientForm.get('legalAddress.addressLine')?.invalid && clientForm.get('legalAddress.addressLine')?.touched" class="error-messages">
+        <small *ngIf="clientForm.get('legalAddress.addressLine')?.errors?.['required']">მისამართი აუცილებელია.</small>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset formGroupName="actualAddress" class="address-group">
+    <legend>ფაქტიური მისამართი</legend>
+    <div class="form-group">
+      <label for="actualCountry">ქვეყანა:</label>
+      <input id="actualCountry" formControlName="country" type="text" class="form-control">
+      <div *ngIf="clientForm.get('actualAddress.country')?.invalid && clientForm.get('actualAddress.country')?.touched" class="error-messages">
+        <small *ngIf="clientForm.get('actualAddress.country')?.errors?.['required']">ქვეყანა აუცილებელია.</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="actualCity">ქალაქი:</label>
+      <input id="actualCity" formControlName="city" type="text" class="form-control">
+      <div *ngIf="clientForm.get('actualAddress.city')?.invalid && clientForm.get('actualAddress.city')?.touched" class="error-messages">
+        <small *ngIf="clientForm.get('actualAddress.city')?.errors?.['required']">ქალაქი აუცილებელია.</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="actualAddressLine">მისამართი:</label>
+      <input id="actualAddressLine" formControlName="addressLine" type="text" class="form-control">
+      <div *ngIf="clientForm.get('actualAddress.addressLine')?.invalid && clientForm.get('actualAddress.addressLine')?.touched" class="error-messages">
+        <small *ngIf="clientForm.get('actualAddress.addressLine')?.errors?.['required']">მისამართი აუცილებელია.</small>
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="form-group">
+    <label for="photo">ფოტოს მისამართი:</label>
+    <input id="photo" formControlName="photo" type="text" class="form-control">
+  </div>
+
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary" [class.disabled]="clientForm.invalid">კლიენტის დამატება</button>
+  </div>
+
+  <div>
+    <a [routerLink]="['/clients']" class="btn btn-primary">უკან დაბრუნება</a>
+  </div>
+</form>

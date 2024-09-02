@@ -1,0 +1,28 @@
+<div class="container">
+<div class="client-detail" *ngIf="client">
+  <h2>კლიენტის დეტალები</h2>
+  <p><strong>სახელი:</strong> {{ client?.firstName }}</p>
+  <p><strong>გვარი:</strong> {{ client?.lastName }}</p>
+  <p><strong>სქესი:</strong> {{ client?.gender }}</p>
+  <p><strong>პირადი ნომერი:</strong> {{ client?.personalNumber }}</p>
+  <p><strong>მობილურის ნომერი:</strong> {{ client?.mobile }}</p>
+  <p><strong>იურიდიული მისამართი:</strong> {{ client?.legalAddress?.country }}, {{ client?.legalAddress?.city }} {{ client?.legalAddress?.addressLine }}</p>
+  <p><strong>ფაქტიური მისამართი:</strong> {{ client?.actualAddress?.country }}, {{ client?.actualAddress?.city }} {{ client?.actualAddress?.addressLine }}</p>
+
+  <h3>კლიენტის ანგარიშები</h3>
+  <div *ngIf="client.accounts && client.accounts.length">
+    <div *ngFor="let account of client.accounts">
+      <p><strong>კლიენტის ნომერი:</strong> {{ account.clientNumber }}</p>
+      <p><strong>ანგარიშის ნომერი:</strong> {{ account.accountNumber }}</p>
+      <p><strong>ანგარიშის ტიპი:</strong> {{ account.type }}</p>
+      <p><strong>ვალუტა:</strong> {{ account.currency }}</p>
+      <p><strong>ანგარიშის სტატუსი:</strong> {{ account.status }}</p>
+    </div>
+  </div>
+
+  <p *ngIf="client?.photo">
+    <img [src]="client.photo" alt="Client Photo" class="client-photo">
+  </p>
+  <a [routerLink]="['/clients']" class="btn btn-primary">უკან დაბრუნება</a>
+</div>
+</div>

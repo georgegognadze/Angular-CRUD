@@ -1,0 +1,48 @@
+<div class="client-list">
+  <button routerLink="/clients/add" class="btn btn-primary btn-lg">კლიენტის დამატება</button>
+
+  <table class="table table-striped table-bordered mt-3 responsive-table">
+    <thead class="thead-dark">
+      <tr>
+        <th (click)="sort('firstName')">სახელი</th>
+        <th (click)="sort('lastName')">გვარი</th>
+        <th (click)="sort('gender')">სქესი</th>
+        <th (click)="sort('personalNumber')">პირადი ნომერი</th>
+        <th (click)="sort('mobile')">მობილურის ნომერი</th>
+        <th (click)="sort('legalAddress.country')">იურიდიული ქვეყანა</th>
+        <th (click)="sort('legalAddress.city')">იურიდიული ქალაქი</th>
+        <th (click)="sort('actualAddress.country')">ფაქტიური ქვეყანა</th>
+        <th (click)="sort('actualAddress.city')">ფაქტიური ქალაქი</th>
+        <th>ფოტო</th>
+        <th>მოქმედება</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients | paginate: { itemsPerPage: itemsPerPage, currentPage: page }">
+        <td data-label="სახელი">{{ client.firstName }}</td>
+        <td data-label="გვარი">{{ client.lastName }}</td>
+        <td data-label="სქესი">{{ client.gender }}</td>
+        <td data-label="პირადი ნომერი">{{ client.personalNumber }}</td>
+        <td data-label="მობილურის ნომერი">{{ client.mobile }}</td>
+        <td data-label="იურიდიული ქვეყანა">{{ client.legalAddress.country }}</td>
+        <td data-label="იურიდიული ქალაქი">{{ client.legalAddress.city }}</td>
+        <td data-label="ფაქტიური ქვეყანა">{{ client.actualAddress.country }}</td>
+        <td data-label="ფაქტიური ქალაქი">{{ client.actualAddress.city }}</td>
+        <td data-label="ფოტო">
+          <img *ngIf="client.photo" [src]="client.photo" alt="Client Photo" appImageFallback="/assets/images/placeholder.webp" class="client-photo">
+        </td>
+        <td data-label="მოქმედება">
+          <div class="action-buttons">
+            <button [routerLink]="['/clients/edit', client.id]" class="btn btn-info btn-sm mr-2">რედაქტირება</button>
+            <button [routerLink]="['/clients', client.id]" class="btn btn-warning btn-sm mr-2">დეტალები</button>
+            <button (click)="deleteClient(client.id)" class="btn btn-danger btn-sm">წაშლა</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination-container">
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  </div>
+</div>

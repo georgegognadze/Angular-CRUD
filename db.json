@@ -1,0 +1,689 @@
+{
+  "clients": [
+    {
+      "id": "1",
+      "firstName": "გიორგი",
+      "lastName": "მეტრეველი",
+      "gender": "კაცი",
+      "personalNumber": "12345678129",
+      "mobile": "555123456",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "თბილისი",
+        "addressLine": "ჭავჭავაძის გამზირი 123"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "თბილისი",
+        "addressLine": "ჭავჭავაძის გამზირი 123"
+      },
+      "photo": "/assets/images/female.webp",
+      "accounts": [
+        {
+          "accountNumber": 10001,
+          "clientNumber": 12345678129,
+          "type": "მიმდინარე",
+          "currency": "USD",
+          "status": "აქტიური"
+        }
+      ],
+      "account": {
+        "accountNumber": 10001,
+        "clientNumber": 12345678129,
+        "type": "მიმდინარე",
+        "currency": "USD",
+        "status": "აქტიური"
+      }
+    },
+    {
+      "id": "2",
+      "firstName": "ნინო",
+      "lastName": "ბერიძე",
+      "gender": "ქალი",
+      "personalNumber": "98765432121",
+      "mobile": "555234567",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "სამტრედია",
+        "addressLine": "რუსთაველის ქუჩა 456"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "სამტრედია",
+        "addressLine": "რუსთაველის ქუჩა 456"
+      },
+      "photo": "/assets/images/female.webp",
+      "accounts": [
+        {
+          "accountNumber": 10002,
+          "clientNumber": 98765432121,
+          "type": "დაგროვებითი",
+          "currency": "EUR",
+          "status": "დახურული"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "firstName": "მიხეილ",
+      "lastName": "ჩხიკვაძე",
+      "gender": "კაცი",
+      "personalNumber": "13579246878",
+      "mobile": "555345678",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "კასპი",
+        "addressLine": "გურამიშვილის ქუჩა 456"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "კასპი",
+        "addressLine": "გურამიშვილის ქუჩა 456"
+      },
+      "photo": "/assets/images/male.webp",
+      "accounts": [
+        {
+          "accountNumber": 10003,
+          "clientNumber": 13579246878,
+          "type": "დაგროვებითი",
+          "currency": "EUR",
+          "status": "დახურული"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "firstName": "მარიამი",
+      "lastName": "ნიკოლაძე",
+      "gender": "ქალი",
+      "personalNumber": "24681357789",
+      "mobile": "555456789",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "ქუთაისი",
+        "addressLine": "აღმაშენებლის ქუჩა 101"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "ქუთაისი",
+        "addressLine": "აღმაშენებლის ქუჩა 101"
+      },
+      "photo": "/assets/images/female.webp",
+      "accounts": [
+        {
+          "accountNumber": 10004,
+          "clientNumber": 24681357789,
+          "type": "მიმდინარე",
+          "currency": "USD",
+          "status": "დახურული"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "firstName": "ანა",
+      "lastName": "ჯავახიშვილი",
+      "gender": "ქალი",
+      "personalNumber": "11223344655",
+      "mobile": "555567890",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "ჭიათურა",
+        "addressLine": "წერეთლის ქუჩა 202"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "ჭიათურა",
+        "addressLine": "წერეთლის ქუჩა 202"
+      },
+      "photo": "/assets/images/female.webp",
+      "accounts": [
+        {
+          "accountNumber": 10005,
+          "clientNumber": 11223344655,
+          "type": "დაგროვებითი",
+          "currency": "GEL",
+          "status": "აქტიური"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "firstName": "თამარი",
+      "lastName": "ხარაბაძე",
+      "gender": "ქალი",
+      "personalNumber": "22334455687",
+      "mobile": "555678901",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "გორი",
+        "addressLine": "აღმაშენებლის გამზირი 303"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "გორი",
+        "addressLine": "აღმაშენებლის გამზირი 303"
+      },
+      "photo": "/assets/images/male.webp",
+      "accounts": [
+        {
+          "accountNumber": 10006,
+          "clientNumber": 22334455687,
+          "type": "დაგროვებითი",
+          "currency": "GEL",
+          "status": "აქტიური"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "firstName": "ლანა",
+      "lastName": "კახიძე",
+      "gender": "ქალი",
+      "personalNumber": "66778899075",
+      "mobile": "555789012",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "ოზურგეთი",
+        "addressLine": "შოთა რუსთაველის გამზირი 404"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "ოზურგეთი",
+        "addressLine": "შოთა რუსთაველის გამზირი 404"
+      },
+      "photo": "/assets/images/female.webp",
+      "accounts": [
+        {
+          "accountNumber": 10007,
+          "clientNumber": 66778899075,
+          "type": "მიმდინარე",
+          "currency": "EUR",
+          "status": "დახურული"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "firstName": "დათო",
+      "lastName": "გოგიჩაიშვილი",
+      "gender": "კაცი",
+      "personalNumber": "99887766565",
+      "mobile": "555890123",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "სენაკი",
+        "addressLine": "ჭავჭავაძის ქუჩა 505"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "სენაკი",
+        "addressLine": "ჭავჭავაძის ქუჩა 505"
+      },
+      "photo": "/assets/images/male.webp",
+      "accounts": [
+        {
+          "accountNumber": 10008,
+          "clientNumber": 99887766565,
+          "type": "დაგროვებითი",
+          "currency": "USD",
+          "status": "აქტიური"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "firstName": "ნატა",
+      "lastName": "აბესაძე",
+      "gender": "ქალი",
+      "personalNumber": "22335566787",
+      "mobile": "555901234",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "სოხუმი",
+        "addressLine": "თამარ მეფის ქუჩა 606"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "სოხუმი",
+        "addressLine": "თამარ მეფის ქუჩა 606"
+      },
+      "photo": "/assets/images/female.webp",
+      "accounts": [
+        {
+          "accountNumber": 10009,
+          "clientNumber": 22335566787,
+          "type": "შემნახველი",
+          "currency": "GEL",
+          "status": "დახურული"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "firstName": "ნიკო",
+      "lastName": "ბერიკაშვილი",
+      "gender": "კაცი",
+      "personalNumber": "33445566787",
+      "mobile": "555012345",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "ფოთი",
+        "addressLine": "სერგო ჭილაძის ქუჩა 707"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "ფოთი",
+        "addressLine": "სერგო ჭილაძის ქუჩა 707"
+      },
+      "photo": "/assets/images/male.webp",
+      "accounts": [
+        {
+          "accountNumber": 10010,
+          "clientNumber": 33445566787,
+          "type": "შემნახველი",
+          "currency": "GEL",
+          "status": "დახურული"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "firstName": "ლიკა",
+      "lastName": "მაჭავარიანი",
+      "gender": "ქალი",
+      "personalNumber": "44556677887",
+      "mobile": "555123456",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "მარნეული",
+        "addressLine": "ირაკლი აბაშიძის ქუჩა 808"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "მარნეული",
+        "addressLine": "ირაკლი აბაშიძის ქუჩა 808"
+      },
+      "photo": "/assets/images/female.webp",
+      "accounts": [
+        {
+          "accountNumber": 10011,
+          "clientNumber": 44556677887,
+          "type": "შემნახველი",
+          "currency": "GEL",
+          "status": "აქტიური"
+        }
+      ],
+      "account": {
+        "accountNumber": "",
+        "clientNumber": "",
+        "type": "",
+        "currency": "",
+        "status": "აქტიური"
+      }
+    },
+    {
+      "id": "12",
+      "firstName": "ვაჟა",
+      "lastName": "მიხელაძე",
+      "gender": "კაცი",
+      "personalNumber": "55667788945",
+      "mobile": "555234567",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "ახმეტა",
+        "addressLine": "თამარაშვილის ქუჩა 909"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "ახმეტა",
+        "addressLine": "თამარაშვილის ქუჩა 909"
+      },
+      "photo": "/assets/images/male.webp",
+      "accounts": [
+        {
+          "accountNumber": 10012,
+          "clientNumber": 55667788945,
+          "type": "შემნახველი",
+          "currency": "GEL",
+          "status": "დახურული"
+        }
+      ],
+      "account": {
+        "accountNumber": "",
+        "clientNumber": "",
+        "type": "",
+        "currency": "",
+        "status": "აქტიური"
+      }
+    },
+    {
+      "id": "13",
+      "firstName": "ეკატერინე",
+      "lastName": "კაპანაძე",
+      "gender": "ქალი",
+      "personalNumber": "12345678901",
+      "mobile": "555123123",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "ხონი",
+        "addressLine": "მოსე ხონელის ქუჩა 789"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "ხონი",
+        "addressLine": "მოსე ხონელის ქუჩა 789"
+      },
+      "photo": "/assets/images/female.webp",
+      "accounts": [
+        {
+          "accountNumber": 10013,
+          "clientNumber": 12345678901,
+          "type": "შემნახველი",
+          "currency": "GEL",
+          "status": "დახურული"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "firstName": "ანდრია",
+      "lastName": "ჯანჯღავა",
+      "gender": "კაცი",
+      "personalNumber": "23456789012",
+      "mobile": "555234234",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "რუსთავი",
+        "addressLine": "რუსთაველის ქუჩა 10"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "რუსთავი",
+        "addressLine": "რუსთაველის ქუჩა 10"
+      },
+      "photo": "/assets/images/male.webp",
+      "accounts": [
+        {
+          "accountNumber": 10014,
+          "clientNumber": 23456789012,
+          "type": "დაგროვებითი",
+          "currency": "EUR",
+          "status": "დახურული"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "firstName": "ანამარია",
+      "lastName": "დევდარიანი",
+      "gender": "ქალი",
+      "personalNumber": "34567890123",
+      "mobile": "555345345",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "ზუგდიდი",
+        "addressLine": "ბეჟან აბაშიძის ქუჩა 2020"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "ზუგდიდი",
+        "addressLine": "ბეჟან აბაშიძის ქუჩა 2020"
+      },
+      "photo": "/assets/images/female.webp",
+      "accounts": [
+        {
+          "accountNumber": 10015,
+          "clientNumber": 34567890123,
+          "type": "დაგროვებითი",
+          "currency": "EUR",
+          "status": "დახურული"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "firstName": "მარიამ",
+      "lastName": "ზურაბიშვილი",
+      "gender": "ქალი",
+      "personalNumber": "56789012345",
+      "mobile": "555567567",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "ქობულეთი",
+        "addressLine": "მარჯანიშვილის ქუჩა 40"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "ქობულეთი",
+        "addressLine": "მარჯანიშვილის ქუჩა 40"
+      },
+      "photo": "/assets/images/female.webp",
+      "accounts": [
+        {
+          "accountNumber": 10016,
+          "clientNumber": 56789012345,
+          "type": "დაგროვებითი",
+          "currency": "EUR",
+          "status": "აქტიური"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "firstName": "ლევან",
+      "lastName": "ქარგიანი",
+      "gender": "კაცი",
+      "personalNumber": "67890123456",
+      "mobile": "555678678",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "ახალციხე",
+        "addressLine": "გაგრის ქუჩა 50"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "ახალციხე",
+        "addressLine": "გაგრის ქუჩა 50"
+      },
+      "photo": "/assets/images/male.webp",
+      "accounts": [
+        {
+          "accountNumber": 10017,
+          "clientNumber": 67890123456,
+          "type": "შემნახველი",
+          "currency": "GEL",
+          "status": "დახურული"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "firstName": "თეონა",
+      "lastName": "მირიანაშვილი",
+      "gender": "ქალი",
+      "personalNumber": "78901234567",
+      "mobile": "555789789",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "ზესტაფონი",
+        "addressLine": "ნიკოლოზ ბარნოვის ქუჩა 60"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "ზესტაფონი",
+        "addressLine": "ნიკოლოზ ბარნოვის ქუჩა 60"
+      },
+      "photo": "/assets/images/female.webp",
+      "accounts": [
+        {
+          "accountNumber": 10018,
+          "clientNumber": 78901234567,
+          "type": "მიმდინარე",
+          "currency": "USD",
+          "status": "აქტიური"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "firstName": "რამაზი",
+      "lastName": "ჭანტურია",
+      "gender": "კაცი",
+      "personalNumber": "89012345678",
+      "mobile": "555890890",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "საგარეჯო",
+        "addressLine": "აბულაძის ქუჩა 70"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "საგარეჯო",
+        "addressLine": "აბულაძის ქუჩა 70"
+      },
+      "photo": "/assets/images/male.webp",
+      "accounts": [
+        {
+          "accountNumber": 10019,
+          "clientNumber": 89012345678,
+          "type": "დაგროვებითი",
+          "currency": "EUR",
+          "status": "დახურული"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "firstName": "ნატალია",
+      "lastName": "ფარიძაშვილი",
+      "gender": "ქალი",
+      "personalNumber": "90123456789",
+      "mobile": "555901901",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "ყვარელი",
+        "addressLine": "შანიძის ქუჩა 80"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "ყვარლი",
+        "addressLine": "შანიძის ქუჩა 80"
+      },
+      "photo": "/assets/images/female.webp",
+      "accounts": [
+        {
+          "accountNumber": 10020,
+          "clientNumber": 90123456789,
+          "type": "შემნახველი",
+          "currency": "GEL",
+          "status": "აქტიური"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "firstName": "ჯაბა",
+      "lastName": "ყიფიანი",
+      "gender": "კაცი",
+      "personalNumber": "01234567890",
+      "mobile": "555012012",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "ხაშური",
+        "addressLine": "ზვიად გამსახურდიას ქუჩა 90"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "ხაშური",
+        "addressLine": "ზვიად გამსახურდიას ქუჩა 90"
+      },
+      "photo": "/assets/images/male.webp",
+      "accounts": [
+        {
+          "accountNumber": 10021,
+          "clientNumber": 80123456789,
+          "type": "მიმდინარე",
+          "currency": "USD",
+          "status": "აქტიური"
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "firstName": "გიორგი",
+      "lastName": "წულაძე",
+      "gender": "კაცი",
+      "personalNumber": "55546789716",
+      "mobile": "555555555",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "თბილისი",
+        "addressLine": "ჭავჭავაძის ქუჩა 1"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "თბილისი",
+        "addressLine": "ჭავჭავაძის ქუჩა 1"
+      },
+      "photo": ""
+    },
+    {
+      "id": "30",
+      "firstName": "გიორგი",
+      "lastName": "დგებუაძე",
+      "gender": "კაცი",
+      "personalNumber": "80123456789",
+      "mobile": "555555555",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "თბილისი",
+        "addressLine": "ჭავჭავაძის ქუჩა 1"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "თბილისი",
+        "addressLine": "ჭავჭავაძის ქუჩა 1"
+      },
+      "photo": "/assets/images/male.webp"
+    },
+    {
+      "id": "31",
+      "firstName": "თინათინ",
+      "lastName": "მეტრეველი",
+      "gender": "ქალი",
+      "personalNumber": "80123456789",
+      "mobile": "555555555",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "თბილისი",
+        "addressLine": "ჭავჭავაძის ქუჩა 1"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "თბილისი",
+        "addressLine": "ჭავჭავაძის ქუჩა 1"
+      },
+      "photo": "/assets/images/male.webp"
+    },
+    {
+      "id": "32",
+      "firstName": "თინათინ",
+      "lastName": "მეტრეველი",
+      "gender": "ქალი",
+      "personalNumber": "80123456789",
+      "mobile": "523456789",
+      "legalAddress": {
+        "country": "საქართველო",
+        "city": "თბილისი",
+        "addressLine": "ჭავჭავაძის ქუჩა 1"
+      },
+      "actualAddress": {
+        "country": "საქართველო",
+        "city": "თბილისი",
+        "addressLine": "ჭავჭავაძის ქუჩა 1"
+      },
+      "photo": "/assets/images/male.webp"
+    }
+  ]
+}
